@@ -1,0 +1,84 @@
+{
+  "produtos": [
+    {
+      "id": 1,
+      "nome": "Camiseta Cruzeiro 2024",
+      "descricao": "Camiseta oficial do Cruzeiro Esporte Clube, 100% algodão",
+      "preco": 129.90,
+      "imagem": "cru24.png",
+      "categoria": "Camisetas",
+      "tamanhos": ["P", "M", "G", "GG"],
+      "cor": "Azul Royal"
+    },
+    {
+      "id": 2,
+      "nome": "Camiseta Retrô Cruzeiro",
+      "descricao": "Camiseta retrô edição limitada, estilo vintage",
+      "preco": 149.90,
+      "imagem": "camiseta-retro-cruzeiro.jpeg",
+      "categoria": "Camisetas",
+      "tamanhos": ["P", "M", "G", "GG"],
+      "cor": "Azul Clássico"
+    },
+    {
+      "id": 3,
+      "nome": "Short Cruzeiro",
+      "descricao": "Short oficial com logotipo bordado, material técnico",
+      "preco": 89.90,
+      "imagem": "short.png",
+      "categoria": "Shorts",
+      "tamanhos": ["P", "M", "G", "GG"],
+      "cor": "Azul"
+    },
+    {
+      "id": 4,
+      "nome": "Meia Cruzeiro",
+      "descricao": "Meia confortável com logo do clube, pack com 3 pares",
+      "preco": 49.90,
+      "imagem": "meia-cruzeiro.png",
+      "categoria": "Meias",
+      "tamanhos": ["Único"],
+      "cor": "Azul e Branco"
+    },
+    {
+      "id": 5,
+      "nome": "Bandeira Cruzeiro",
+      "descricao": "Bandeira oficial do Cruzeiro, 1.5m x 1m, poliéster",
+      "preco": 79.90,
+      "imagem": "bandeira.png",
+      "categoria": "Bandeiras",
+      "tamanhos": ["Única"],
+      "cor": "Azul, Branco e Dourado"
+    },
+    {
+      "id": 6,
+      "nome": "Boné Cruzeiro",
+      "descricao": "Boné ajustável com bordado frontal da Máfia Azul",
+      "preco": 59.90,
+      "imagem": "bone.png",
+      "categoria": "Acessórios",
+      "tamanhos": ["Único"],
+      "cor": "Azul"
+    },
+    {
+      "id": 7,
+      "nome": "Moletom Cruzeiro",
+      "descricao": "Moletom premium com capuz, ideal para dias frios",
+      "preco": 169.90,
+      "imagem": "moletom.png",
+      "categoria": "Moletom",
+      "tamanhos": ["P", "M", "G", "GG"],
+      "cor": "Azul Royal"
+    },
+    {
+      "id": 8,
+      "nome": "Caneca Cruzeiro",
+      "descricao": "Caneca de cerâmica com logo do clube, 350ml",
+      "preco": 39.90,
+      "imagem": "caneca_1.png",
+      "categoria": "Utensílios",
+      "tamanhos": ["350ml"],
+      "cor": "Azul"
+    }
+  ]
+}

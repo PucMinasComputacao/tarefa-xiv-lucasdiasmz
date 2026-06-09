@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos - Cruzeiro EC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/cadastro.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top cz-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">⭐ CRUZEIRO EC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#destaque">Destaque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#produtos">Produtos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro_produtos.html">Cadastro</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO CADASTRO -->
+    <div class="cadastro-hero">
+        <div class="container">
+            <h1 class="cadastro-hero-title">Cadastro de Produtos</h1>
+        </div>
+    </div>
+
+    <!-- CADASTRO SECTION -->
+    <section class="cadastro-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <a href="index.html" class="btn-voltar">← Voltar para loja</a>
+
+                    <div class="cadastro-card">
+                        <h2 class="cadastro-title">Novo Produto</h2>
+                        <form id="formCadastro">
+                            <!-- Nome -->
+                            <div class="mb-3">
+                                <label for="nome" class="form-label">Nome do Produto</label>
+                                <input type="text" class="form-control" id="nome" name="nome" required>
+                            </div>
+
+                            <!-- Descrição Curta -->
+                            <div class="mb-3">
+                                <label for="descricaoCurta" class="form-label">Descrição Curta</label>
+                                <input type="text" class="form-control" id="descricaoCurta" name="descricaoCurta" required>
+                            </div>
+
+                            <!-- Descrição Completa -->
+                            <div class="mb-3">
+                                <label for="descricaoCompleta" class="form-label">Descrição Completa</label>
+                                <textarea class="form-control" id="descricaoCompleta" name="descricaoCompleta" rows="4" required></textarea>
+                            </div>
+
+                            <!-- Preço -->
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="preco" class="form-label">Preço (R$)</label>
+                                    <input type="number" class="form-control" id="preco" name="preco" step="0.01" min="0" required>
+                                </div>
+
+                                <!-- Categoria -->
+                                <div class="col-md-6">
+                                    <label for="categoria" class="form-label">Categoria</label>
+                                    <select class="form-select" id="categoria" name="categoria" required>
+                                        <option value="">Selecione uma categoria</option>
+                                        <option value="Camisetas">Camisetas</option>
+                                        <option value="Shorts">Shorts</option>
+                                        <option value="Acessórios">Acessórios</option>
+                                        <option value="Moletom">Moletom</option>
+                                        <option value="Utensílios">Utensílios</option>
+                                        <option value="Bandeiras">Bandeiras</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Imagem -->
+                            <div class="mb-3">
+                                <label for="imagem" class="form-label">Caminho da Imagem</label>
+                                <input type="text" class="form-control" id="imagem" name="imagem" placeholder="ex: img/produto.png" required>
+                            </div>
+
+                            <!-- Tags -->
+                            <div class="mb-3">
+                                <label for="tags" class="form-label">Tags (separadas por vírgula)</label>
+                                <input type="text" class="form-control" id="tags" name="tags" placeholder="ex: oficial, algodão, confortável" required>
+                            </div>
+
+                            <!-- Tamanhos -->
+                            <div class="mb-3">
+                                <label class="form-label">Tamanhos Disponíveis</label>
+                                <div class="tamanho-checkbox">
+                                    <label>
+                                        <input type="checkbox" name="tamanhos" value="P"> P
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tamanhos" value="M"> M
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tamanhos" value="G"> G
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tamanhos" value="GG"> GG
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tamanhos" value="Único"> Único
+                                    </label>
+                                    <label>
+                                        <input type="checkbox" name="tamanhos" value="350ml"> 350ml
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Destaque -->
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="destaque" name="destaque">
+                                <label class="form-check-label" for="destaque">
+                                    Produto em Destaque
+                                </label>
+                            </div>
+
+                            <!-- Botões -->
+                            <div class="d-grid gap-2 mt-4">
+                                <button type="submit" class="btn-cadastro">
+                                    ✅ Cadastrar Produto
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="cz-footer text-white pt-5 pb-3">
+        <div class="container">
+            <div class="footer-trophy-bar d-flex flex-wrap justify-content-center gap-4 mb-5">
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">39</span>
+                    <span class="footer-trophy-label">Campeonatos<br>Mineiros</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">4</span>
+                    <span class="footer-trophy-label">Brasileiros<br>Série A</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">6</span>
+                    <span class="footer-trophy-label">Copas<br>do Brasil</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">2</span>
+                    <span class="footer-trophy-label">Copas<br>Libertadores</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">1921</span>
+                    <span class="footer-trophy-label">Ano de<br>Fundação</span>
+                </div>
+            </div>
+            <hr class="footer-hr">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <p class="footer-copy mb-0">© 2026 Cruzeiro Esporte Clube · Todos os direitos reservados</p>
+                <p class="footer-copy mb-0">Trabalho Prático · Lucas Dias Melo · Matrícula 927740</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cz-toast" id="czToast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/cadastro.js"></script>
+</body>
+</html>

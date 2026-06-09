@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cruzeiro Esporte Clube - Loja Oficial</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top cz-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">⭐ CRUZEIRO EC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#destaque">Destaque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#produtos">Produtos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="cz-hero text-center text-white py-5">
+        <div class="container py-4">
+            <h1 class="display-3 fw-bold cz-title">CRUZEIRO<br>ESPORTE CLUBE</h1>
+            <p class="lead mt-3 hero-sub">Essa página é dedicada ao MAIOR clube de Minas Gerais.</p>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- DESTAQUE (CAROUSEL) -->
+        <section id="destaque" class="py-5 cz-section-destaque">
+            <div class="container">
+                <h2 class="section-title text-center mb-4">Itens em Destaque</h2>
+                <div id="carouselDestaque" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carouselDestaque" data-bs-slide-to="2"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active carousel-bg-1">
+                            <img src="img/cru24.png" class="d-block w-100" alt="Destaque 1">
+                        </div>
+                        <div class="carousel-item carousel-bg-2">
+                            <img src="img/camiseta-retro-cruzeiro.jpeg" class="d-block w-100" alt="Destaque 2">
+                        </div>
+                        <div class="carousel-item carousel-bg-3">
+                            <img src="img/moletom.png" class="d-block w-100" alt="Destaque 3">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaque" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaque" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUTOS -->
+        <section id="produtos" class="py-5 cz-section-light">
+            <div class="container">
+                <h2 class="section-title text-center mb-5">Todos os Itens</h2>
+                <div id="gridProdutos" class="row g-4">
+                    <!-- Produtos serão carregados aqui pelo JavaScript -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="cz-footer text-white pt-5 pb-3">
+        <div class="container">
+            <div class="footer-trophy-bar d-flex flex-wrap justify-content-center gap-4 mb-5">
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">39</span>
+                    <span class="footer-trophy-label">Campeonatos<br>Mineiros</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">4</span>
+                    <span class="footer-trophy-label">Brasileiros<br>Série A</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">6</span>
+                    <span class="footer-trophy-label">Copas<br>do Brasil</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">2</span>
+                    <span class="footer-trophy-label">Copas<br>Libertadores</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">1921</span>
+                    <span class="footer-trophy-label">Ano de<br>Fundação</span>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <h6 class="footer-col-title">Sobre o Cruzeiro</h6>
+                    <p class="footer-text">
+                        O Cruzeiro é muito mais que um clube de futebol. É uma instituição que representa a paixão, a história e a tradição de Minas Gerais. Desde sua fundação em 1921, conquistou títulos que marcaram época e criou memórias inesquecíveis para milhões de torcedores.
+                    </p>
+                    <p class="footer-text">
+                        🏟️ Mineirão | 📍 Belo Horizonte - MG<br>
+                        🎨 Azul e Branco | 🦊 Raposa
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="footer-col-title">Navegação</h6>
+                    <ul class="footer-links-list">
+                        <li><a href="#destaque">Destaques</a></li>
+                        <li><a href="#produtos">Comprar</a></li>
+                        <li><a href="#produtos">Acessórios</a></li>
+                        <li><a href="#produtos">Coleções</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="footer-col-title">Títulos</h6>
+                    <ul class="footer-links-list">
+                        <li>2x Libertadores</li>
+                        <li>4x Brasileiro</li>
+                        <li>6x Copa do Brasil</li>
+                        <li>39x Mineiro</li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="footer-col-title">Acompanhe</h6>
+                    <div class="footer-social-row mb-3">
+                        <a href="https://www.facebook.com/Cruzeiro" target="_blank" class="footer-social-btn">Facebook</a>
+                        <a href="https://twitter.com/Cruzeiro" target="_blank" class="footer-social-btn">Twitter</a>
+                        <a href="https://www.instagram.com/cruzeiro" target="_blank" class="footer-social-btn">Instagram</a>
+                        <a href="https://www.youtube.com/@CruzeiroEC" target="_blank" class="footer-social-btn">YouTube</a>
+                    </div>
+                    <p class="footer-text">
+                        🌐 www.cruzeiro.com.br<br>
+                        📧 loja@cruzeiro.com.br
+                    </p>
+                </div>
+            </div>
+
+            <hr class="footer-hr">
+            <div class="text-center">
+                <p class="footer-copy mb-0">© 2026 Cruzeiro Esporte Clube · Todos os direitos reservados</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal do Carrinho -->
+    <div class="modal fade" id="modalProduto" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitulo"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img id="modalImagem" src="" alt="" class="w-100 mb-3 rounded">
+                    <p id="modalDescricao"></p>
+                    <p class="fw-bold">Preço: R$ <span id="modalPreco"></span></p>
+                    <label class="form-label">Tamanho:</label>
+                    <select id="modalTamanho" class="form-select mb-3"></select>
+                    <label class="form-label">Quantidade:</label>
+                    <input id="modalQuantidade" type="number" class="form-control" value="1" min="1">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary" onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

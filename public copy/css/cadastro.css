@@ -1,0 +1,131 @@
+/* ── CADASTRO PÁGINA ────────────────────────── */
+.cadastro-hero {
+    background: linear-gradient(135deg, #002f7a 0%, #0065D1 50%, #153679 100%);
+    padding: 2rem 0;
+    border-bottom: 3px solid #FFD700;
+}
+
+.cadastro-hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    letter-spacing: 1px;
+    margin: 0;
+    font-weight: 700;
+}
+
+.cadastro-section {
+    background-color: #f0f5fc;
+    min-height: 80vh;
+    padding: 3rem 0;
+}
+
+.cadastro-card {
+    background: white;
+    border-radius: 16px;
+    border: 2px solid #d0e2f7;
+    padding: 2.5rem;
+    box-shadow: 0 8px 30px rgba(0, 65, 171, 0.12);
+}
+
+.cadastro-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0047AB;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-label {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #0047AB;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    border: 2px solid #d0e2f7;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #0065D1;
+    box-shadow: 0 0 0 0.2rem rgba(0, 101, 209, 0.25);
+}
+
+.btn-cadastro {
+    width: 100%;
+    background: linear-gradient(135deg, #0065D1, #004a9a);
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 10px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+}
+
+.btn-cadastro:hover {
+    background: #0047AB;
+    transform: translateY(-2px);
+    color: white;
+}
+
+.btn-voltar {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    color: #0065D1;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s;
+}
+
+.btn-voltar:hover {
+    color: #0047AB;
+}
+
+.form-check-input {
+    border: 2px solid #d0e2f7;
+    cursor: pointer;
+}
+
+.form-check-input:checked {
+    background-color: #0065D1;
+    border-color: #0065D1;
+}
+
+.form-check-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .cadastro-card {
+        padding: 1.5rem;
+    }
+
+    .cadastro-title {
+        font-size: 1.5rem;
+    }
+
+    .cadastro-hero-title {
+        font-size: 1.3rem;
+    }
+}

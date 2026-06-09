@@ -1,0 +1,808 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ── NAVBAR ─────────────────────────────── */
+.cz-navbar {
+    background: linear-gradient(135deg, #0047AB 0%, #003d8f 100%);
+    border-bottom: 3px solid #FFD700;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.cz-navbar .navbar-brand {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
+    color: #fff !important;
+    transition: transform 0.3s ease;
+    font-weight: 700;
+}
+
+.cz-navbar .navbar-brand:hover {
+    transform: scale(1.05);
+}
+
+.cz-navbar .nav-link {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    color: rgba(255,255,255,0.85) !important;
+    transition: all 0.3s ease;
+    position: relative;
+    font-weight: 500;
+}
+
+.cz-navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFD700;
+    transition: width 0.3s ease;
+}
+
+.cz-navbar .nav-link:hover {
+    color: #FFD700 !important;
+}
+
+.cz-navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ── HERO ────────────────────────────────── */
+.cz-hero {
+    background: linear-gradient(135deg, #002f7a 0%, #0065D1 50%, #153679 100%);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cz-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,0.03) 40px,
+        rgba(255,255,255,0.03) 80px
+    );
+}
+
+.cz-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.05;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.4);
+    animation: slideInDown 0.8s ease-out;
+}
+
+.hero-sub {
+    font-family: 'Sora', sans-serif;
+    opacity: 0.8;
+    letter-spacing: 0.5px;
+    animation: slideInUp 0.8s ease-out 0.2s both;
+    font-weight: 400;
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── SECTIONS ────────────────────────────── */
+.cz-section-light {
+    background-color: #f0f5fc;
+}
+
+.cz-section-intro {
+    background: linear-gradient(135deg, #e8f1f8 0%, #f0f5fc 100%);
+    padding: 3rem 0;
+}
+
+.intro-box {
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(74, 144, 226, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(74, 144, 226, 0.3);
+}
+
+.intro-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.intro-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.95);
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+/* ── DESTAQUE (CAROUSEL) ─────────────────── */
+.cz-section-destaque {
+    background-color: white;
+    padding: 3rem 0;
+}
+
+.carousel {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0,65,171,0.15);
+    transition: transform 0.3s ease;
+    background: transparent;
+}
+
+.carousel:hover {
+    transform: scale(1.01);
+}
+
+.carousel-inner {
+    background: transparent;
+}
+
+.carousel-item {
+    background: transparent;
+}
+
+.carousel-bg-1 {
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.carousel-bg-2 {
+    background: linear-gradient(135deg, #e8f0f8 0%, #f0f5fc 100%);
+}
+
+.carousel-bg-3 {
+    background: linear-gradient(135deg, #f8f0e8 0%, #faf5f0 100%);
+}
+
+.carousel-inner img {
+    height: 500px;
+    object-fit: contain;
+    background: transparent;
+    padding: 20px;
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: #0065D1;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicators [data-bs-target].active {
+    background-color: #FFD700;
+    transform: scale(1.3);
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.3));
+}
+
+/* ── HISTÓRIA ────────────────────────────── */
+.cz-section-historia {
+    background: linear-gradient(160deg, #002f7a, #0047AB);
+    padding: 3rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cz-section-historia::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,215,0,0.03) 40px,
+        rgba(255,215,0,0.03) 80px
+    );
+}
+
+.historia-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    opacity: 0.95;
+    position: relative;
+    z-index: 1;
+    font-weight: 400;
+}
+
+/* ── PRODUTOS ────────────────────────────── */
+.section-title {
+    font-family: 'Lexend', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0047AB;
+    letter-spacing: 1.5px;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+    border-radius: 2px;
+}
+
+.product-card {
+    background: white;
+    border: 2px solid #d0e2f7;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    box-shadow: 0 4px 16px rgba(0,65,171,0.08);
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,65,171,0.15);
+    border-color: #0065D1;
+}
+
+.product-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    background-color: #f0f5fc;
+}
+
+.product-body {
+    padding: 1.5rem;
+}
+
+.product-name {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0047AB;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.product-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.product-price {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #0065D1;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5px;
+}
+
+.product-btn {
+    width: 100%;
+    background: linear-gradient(135deg, #0065D1, #004a9a);
+    color: white;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.product-btn:hover {
+    background-color: #0047AB;
+    transform: scale(1.02);
+}
+
+/* ── SOBRE ───────────────────────────────── */
+.cz-section-sobre {
+    background-color: #f0f5fc;
+}
+
+.sobre-box {
+    background: white;
+    border: 2px solid #d0e2f7;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,65,171,0.08);
+}
+
+.sobre-subtitle {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.2rem;
+    color: #0065D1;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.sobre-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.8;
+    font-weight: 400;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.social-link {
+    font-family: 'Outfit', sans-serif;
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    background: linear-gradient(135deg, #0065D1, #004a9a);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+.social-link:hover {
+    background-color: #0047AB;
+    transform: translateX(5px);
+    text-decoration: none;
+    color: white;
+}
+
+/* ── FOOTER ──────────────────────────────── */
+.cz-footer {
+    background: linear-gradient(180deg, #001a4d 0%, #001033 100%);
+    border-top: 4px solid #FFD700;
+}
+
+.cz-footer .container {
+    padding: 0;
+}
+
+/* Faixa de troféus */
+.footer-trophy-bar {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 3rem 2rem 2.5rem;
+    background: rgba(255, 215, 0, 0.03);
+}
+
+.footer-trophy-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 100px;
+    transition: all 0.3s ease;
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.footer-trophy-item:hover {
+    transform: translateY(-8px) scale(1.08);
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.footer-trophy-num {
+    font-family: 'Lexend', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #FFD700;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+
+.footer-trophy-label {
+    font-family: 'Sora', sans-serif;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.75);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    font-weight: 500;
+}
+
+.footer-trophy-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.15);
+    align-self: stretch;
+    margin: 4px 0;
+    height: 60px;
+}
+
+/* Seção Principal do Footer */
+.footer-main-content {
+    padding: 3.5rem 2rem;
+}
+
+/* Colunas */
+.footer-col-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #FFD700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid rgba(255,215,0,0.4);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.9;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.footer-text strong {
+    color: #FFD700;
+    font-weight: 600;
+}
+
+.footer-info-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.75);
+}
+
+.footer-info-item strong {
+    color: #FFD700;
+    min-width: 80px;
+    font-weight: 600;
+}
+
+.footer-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-links-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.6;
+    transition: all 0.3s ease;
+    font-weight: 400;
+}
+
+.footer-links-list li a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+}
+
+.footer-links-list li a::before {
+    content: '▶';
+    opacity: 0;
+    margin-right: 6px;
+    transition: opacity 0.3s ease;
+    font-size: 0.7rem;
+    color: #FFD700;
+}
+
+.footer-links-list li a:hover {
+    color: #FFD700;
+    padding-left: 8px;
+}
+
+.footer-links-list li a:hover::before {
+    opacity: 1;
+}
+
+/* Redes sociais */
+.footer-social-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-social-btn {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border: 1.5px solid rgba(255,215,0,0.4);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-weight: 500;
+    background: rgba(255,215,0,0.05);
+}
+
+.footer-social-btn:hover {
+    background: rgba(255,215,0,0.15);
+    border-color: #FFD700;
+    color: #FFD700;
+    transform: translateX(6px);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.2);
+}
+
+.footer-site-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+}
+
+.footer-site-link {
+    color: #90b8e8;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-site-link:hover {
+    color: #FFD700;
+    transform: translateX(4px);
+}
+
+/* Rodapé base */
+.footer-hr {
+    border-color: rgba(255,255,255,0.1);
+    margin: 2.5rem 2rem 1.5rem;
+}
+
+.footer-bottom {
+    padding: 1.5rem 2rem;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.footer-copy {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.55);
+    font-weight: 400;
+}
+
+/* ── MODAL ───────────────────────────────── */
+.modal-content {
+    border-radius: 12px;
+    border: 2px solid #d0e2f7;
+}
+
+.modal-header {
+    background-color: #0065D1;
+    color: white;
+}
+
+.modal-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.form-label {
+    font-family: 'Outfit', sans-serif;
+    color: #0047AB;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.form-select, .form-control {
+    border-color: #d0e2f7;
+    font-family: 'Inter', sans-serif;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: #0065D1;
+    box-shadow: 0 0 0 0.2rem rgba(0, 101, 209, 0.25);
+}
+
+.btn-primary {
+    background-color: #0065D1;
+    border-color: #0065D1;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: #0047AB;
+    border-color: #0047AB;
+}
+
+/* ── RESPONSIVE ──────────────────────────── */
+@media (max-width: 768px) {
+    .carousel-inner img {
+        height: 350px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .product-price {
+        font-size: 1.5rem;
+    }
+
+    .footer-trophy-bar {
+        padding: 2rem 1rem;
+    }
+
+    .footer-trophy-item {
+        min-width: 80px;
+        padding: 0.75rem;
+    }
+
+    .footer-main-content {
+        padding: 2.5rem 1rem;
+    }
+
+    .footer-trophy-num {
+        font-size: 2rem;
+    }
+
+    .footer-col-title {
+        font-size: 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cz-title {
+        letter-spacing: 1px;
+    }
+
+    .carousel-inner img {
+        height: 280px;
+    }
+
+    .intro-title {
+        font-size: 1.2rem;
+    }
+
+    .intro-text {
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.4rem;
+    }
+
+    .historia-text {
+        font-size: 0.85rem;
+    }
+
+    .footer-trophy-divider {
+        display: none;
+    }
+
+    .footer-trophy-item {
+        min-width: 70px;
+        padding: 0.5rem;
+    }
+
+    .footer-trophy-num {
+        font-size: 1.8rem;
+    }
+
+    .footer-trophy-label {
+        font-size: 0.65rem;
+    }
+
+    .footer-col-title {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.85rem;
+    }
+
+    .footer-bottom {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .footer-copy {
+        font-size: 0.75rem;
+    }
+}
+
+/* ── SCROLL BAR ──────────────────────────── */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f5fc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #0065D1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #0047AB;
+}

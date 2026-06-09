@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto - Cruzeiro EC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&family=Lexend:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .detalhe-hero {
+            background: linear-gradient(135deg, #002f7a 0%, #0065D1 50%, #153679 100%);
+            padding: 1.5rem 0;
+            border-bottom: 3px solid #FFD700;
+        }
+        .breadcrumb-cz {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+        }
+        .breadcrumb-cz a { color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+        .breadcrumb-cz a:hover { color: #FFD700; }
+        .breadcrumb-cz .separator { color: rgba(255,255,255,0.4); margin: 0 0.5rem; }
+        .breadcrumb-cz .current { color: #FFD700; }
+
+        .detalhe-section { background-color: #f0f5fc; min-height: 70vh; padding: 3rem 0; }
+
+        .detalhe-img-wrapper {
+            background: white;
+            border-radius: 16px;
+            border: 2px solid #d0e2f7;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,65,171,0.12);
+            position: relative;
+        }
+        .detalhe-img-wrapper .badge-categoria {
+            position: absolute;
+            top: 1rem; left: 1rem;
+            background: #0065D1;
+            color: white;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+        #detalheImagem { width: 100%; height: 450px; object-fit: contain; display: block; background: white; }
+
+        .detalhe-info {
+            background: white; border-radius: 16px; border: 2px solid #d0e2f7;
+            padding: 2rem; box-shadow: 0 8px 30px rgba(0,65,171,0.08);
+        }
+        .detalhe-nome {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem; font-weight: 700; color: #0047AB;
+            letter-spacing: 1px; line-height: 1.1; margin-bottom: 0.25rem;
+        }
+        .detalhe-cor-badge {
+            display: inline-block; font-family: 'Inter', sans-serif;
+            font-size: 0.8rem; color: #555; background: #e8f1f8;
+            border-radius: 20px; padding: 0.2rem 0.75rem; margin-bottom: 1rem;
+        }
+        .detalhe-preco {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.8rem; font-weight: 700; color: #0065D1; line-height: 1;
+        }
+        .detalhe-preco-sub { font-family: 'Inter', sans-serif; font-size: 0.8rem; color: #888; margin-bottom: 1.5rem; }
+        .detalhe-desc {
+            font-family: 'Inter', sans-serif; font-size: 0.95rem; color: #444; line-height: 1.8;
+            border-top: 1px solid #e8f1f8; border-bottom: 1px solid #e8f1f8;
+            padding: 1rem 0; margin-bottom: 1.25rem;
+        }
+        .label-cz {
+            font-family: 'Space Grotesk', sans-serif; font-size: 0.85rem; font-weight: 600;
+            letter-spacing: 1px; color: #0047AB; text-transform: uppercase; margin-bottom: 0.4rem;
+        }
+        .tamanho-group { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.25rem; }
+        .tamanho-btn {
+            font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 600;
+            padding: 0.4rem 1.1rem; border: 2px solid #d0e2f7; border-radius: 8px;
+            background: white; color: #0047AB; cursor: pointer; transition: all 0.15s;
+        }
+        .tamanho-btn:hover, .tamanho-btn.selected { background: #0065D1; color: white; border-color: #0065D1; }
+
+        .qty-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem; }
+        .qty-ctrl { display: flex; align-items: center; border: 2px solid #d0e2f7; border-radius: 8px; overflow: hidden; }
+        .qty-btn {
+            background: #f0f5fc; border: none; width: 38px; height: 38px;
+            font-size: 1.2rem; font-weight: 700; color: #0047AB; cursor: pointer; transition: background 0.15s;
+        }
+        .qty-btn:hover { background: #d0e2f7; }
+        #qtyValue {
+            width: 44px; text-align: center; font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.1rem; font-weight: 600; color: #0047AB; border: none; outline: none;
+        }
+        .btn-add-cart {
+            width: 100%; background: linear-gradient(135deg, #0065D1, #004a9a); color: white; border: none;
+            padding: 0.85rem; border-radius: 10px; font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem; font-weight: 700; letter-spacing: 1px; cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+        }
+        .btn-add-cart:hover { background: #0047AB; transform: translateY(-2px); }
+        .btn-voltar {
+            font-family: 'Outfit', sans-serif; font-size: 0.95rem; color: #0065D1;
+            text-decoration: none; display: inline-flex; align-items: center;
+            gap: 0.3rem; margin-bottom: 1rem; transition: color 0.2s;
+        }
+        .btn-voltar:hover { color: #0047AB; }
+        .specs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1rem; }
+        .spec-item { background: #f0f5fc; border-radius: 8px; padding: 0.75rem 1rem; }
+        .spec-label { font-family: 'Space Grotesk', sans-serif; font-size: 0.75rem; color: #888; letter-spacing: 1px; text-transform: uppercase; }
+        .spec-value { font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 600; color: #333; }
+
+        .relacionados-section { background: white; padding: 3rem 0; border-top: 1px solid #d0e2f7; }
+
+        .cz-toast {
+            position: fixed; bottom: 2rem; right: 2rem; background: #0047AB; color: white;
+            font-family: 'Inter', sans-serif; font-size: 0.9rem; padding: 0.8rem 1.4rem;
+            border-radius: 10px; box-shadow: 0 6px 20px rgba(0,65,171,0.3);
+            border-left: 4px solid #FFD700; transform: translateX(120%);
+            transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1); z-index: 9999; max-width: 320px;
+        }
+        .cz-toast.show { transform: translateX(0); }
+
+        .loading-state {
+            text-align: center; padding: 5rem; color: #0065D1;
+            font-family: 'Space Grotesk', sans-serif; font-size: 1.2rem; letter-spacing: 2px;
+        }
+        @media (max-width: 768px) {
+            #detalheImagem { height: 350px; }
+            .detalhe-nome { font-size: 1.8rem; }
+            .detalhe-preco { font-size: 2.2rem; }
+            .specs-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top cz-navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">⭐ CRUZEIRO EC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html#destaque">Destaque</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#produtos">Produtos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO BREADCRUMB -->
+    <div class="detalhe-hero">
+        <div class="container">
+            <nav class="breadcrumb-cz">
+                <a href="index.html">🏠 Início</a>
+                <span class="separator">›</span>
+                <a href="index.html#produtos">Produtos</a>
+                <span class="separator">›</span>
+                <span class="current" id="breadcrumbNome">Produto</span>
+            </nav>
+        </div>
+    </div>
+
+    <!-- DETALHE SECTION -->
+    <section class="detalhe-section">
+        <div class="container">
+
+            <div id="loadingState" class="loading-state">
+                <div class="spinner-border text-primary mb-3" role="status"></div>
+                <p>CARREGANDO PRODUTO...</p>
+            </div>
+
+            <div id="produtoDetalhe" style="display:none;">
+                <a href="index.html#produtos" class="btn-voltar">← Voltar para produtos</a>
+                <div class="row g-4 mt-1">
+                    <div class="col-md-5">
+                        <div class="detalhe-img-wrapper">
+                            <span id="badgeCategoria" class="badge-categoria"></span>
+                            <img id="detalheImagem" src="" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-7">
+                        <div class="detalhe-info">
+                            <h1 class="detalhe-nome" id="detalheNome"></h1>
+                            <span class="detalhe-cor-badge" id="detalheCor"></span>
+                            <div class="detalhe-preco">R$ <span id="detalhePreco"></span></div>
+                            <p class="detalhe-preco-sub">✅ Produto oficial · Frete para todo Brasil</p>
+                            <p class="detalhe-desc" id="detalheDescricao"></p>
+                            <div class="label-cz">Tamanho</div>
+                            <div class="tamanho-group" id="tamanhosContainer"></div>
+                            <div class="label-cz">Quantidade</div>
+                            <div class="qty-row mb-3">
+                                <div class="qty-ctrl">
+                                    <button class="qty-btn" onclick="changeQty(-1)">−</button>
+                                    <span id="qtyValue">1</span>
+                                    <button class="qty-btn" onclick="changeQty(1)">+</button>
+                                </div>
+                                <span style="font-family:'Inter';font-size:0.85rem;color:#888;">unidade(s)</span>
+                            </div>
+                            <button class="btn-add-cart" onclick="adicionarAoCarrinho()">
+                                🛒 Adicionar ao Carrinho
+                            </button>
+                            <div class="specs-grid mt-3" id="specsGrid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="erroState" style="display:none;" class="text-center py-5">
+                <p class="text-danger fs-4">❌ Produto não encontrado.</p>
+                <a href="index.html#produtos" class="btn btn-primary mt-3">Ver todos os produtos</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PRODUTOS RELACIONADOS -->
+    <section class="relacionados-section" id="secaoRelacionados" style="display:none;">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">Você também pode gostar</h2>
+            <div class="row g-4" id="gridRelacionados"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="cz-footer text-white pt-5 pb-3">
+        <div class="container">
+            <div class="footer-trophy-bar d-flex flex-wrap justify-content-center gap-4 mb-5">
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">39</span>
+                    <span class="footer-trophy-label">Campeonatos<br>Mineiros</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">4</span>
+                    <span class="footer-trophy-label">Brasileiros<br>Série A</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">6</span>
+                    <span class="footer-trophy-label">Copas<br>do Brasil</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">2</span>
+                    <span class="footer-trophy-label">Copas<br>Libertadores</span>
+                </div>
+                <div class="footer-trophy-divider"></div>
+                <div class="footer-trophy-item text-center">
+                    <span class="footer-trophy-num">1921</span>
+                    <span class="footer-trophy-label">Ano de<br>Fundação</span>
+                </div>
+            </div>
+            <hr class="footer-hr">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2">
+                <p class="footer-copy mb-0">© 2026 Cruzeiro Esporte Clube · Todos os direitos reservados</p>
+                <p class="footer-copy mb-0">Trabalho Prático · Lucas Dias Melo · Matrícula 927740</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cz-toast" id="czToast"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="js/detalhe.js"></script>
+</body>
+</html>
