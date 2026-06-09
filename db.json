@@ -3,47 +3,28 @@
     {
       "id": 1,
       "nome": "Camiseta Cruzeiro 2024",
-<<<<<<< HEAD
       "descricaoCurta": "Camiseta oficial do Cruzeiro Esporte Clube",
-      "descricaoCompleta": "Camiseta oficial do Cruzeiro Esporte Clube, confeccionada em 100% algodão de alta qualidade. Perfeita para torcedores que desejam usar as cores da Raposa em qualquer ocasião. Possui estampa frontal com o símbolo oficial do clube.",
+      "descricaoCompleta": "Camiseta oficial do Cruzeiro Esporte Clube, confeccionada em 100% algodão de alta qualidade. Perfeita para torcedores que desejam usar as cores da Raposa em qualquer ocasião.",
       "imagem": "img/cru24.png",
       "categoria": "Camisetas",
       "preco": 129.90,
       "tags": ["oficial", "algodão", "2024"],
       "destaque": true
-=======
-      "descricao": "Camiseta oficial do Cruzeiro Esporte Clube, 100% algodão",
-      "preco": 129.90,
-      "imagem": "cru24.png",
-      "categoria": "Camisetas",
-      "tamanhos": ["P", "M", "G", "GG"],
-      "cor": "Azul Royal"
->>>>>>> 5d703012d084cee80c62a3b839a086fdaa7adb95
     },
     {
       "id": 2,
       "nome": "Camiseta Retrô Cruzeiro",
-<<<<<<< HEAD
       "descricaoCurta": "Camiseta retrô edição limitada",
-      "descricaoCompleta": "Camiseta retrô edição limitada com estilo vintage. Homenageia os grandes momentos históricos do Cruzeiro. Confeccionada em material confortável e durável, ideal para fãs nostálgicos.",
+      "descricaoCompleta": "Camiseta retrô edição limitada com estilo vintage. Homenageia os grandes momentos históricos do Cruzeiro. Confeccionada em material confortável e durável, ideal para colecionadores.",
       "imagem": "img/camiseta-retro-cruzeiro.jpeg",
       "categoria": "Camisetas",
       "preco": 149.90,
       "tags": ["vintage", "edição limitada", "retrô"],
       "destaque": true
-=======
-      "descricao": "Camiseta retrô edição limitada, estilo vintage",
-      "preco": 149.90,
-      "imagem": "camiseta-retro-cruzeiro.jpeg",
-      "categoria": "Camisetas",
-      "tamanhos": ["P", "M", "G", "GG"],
-      "cor": "Azul Clássico"
->>>>>>> 5d703012d084cee80c62a3b839a086fdaa7adb95
     },
     {
       "id": 3,
       "nome": "Short Cruzeiro",
-<<<<<<< HEAD
       "descricaoCurta": "Short oficial com logotipo bordado",
       "descricaoCompleta": "Short oficial do Cruzeiro com logotipo bordado e material técnico respirável. Ideal para treinos, atividades físicas e uso casual. Possui cintura elástica ajustável para maior conforto.",
       "imagem": "img/short.png",
@@ -51,19 +32,10 @@
       "preco": 89.90,
       "tags": ["técnico", "respirável", "confortável"],
       "destaque": false
-=======
-      "descricao": "Short oficial com logotipo bordado, material técnico",
-      "preco": 89.90,
-      "imagem": "short.png",
-      "categoria": "Shorts",
-      "tamanhos": ["P", "M", "G", "GG"],
-      "cor": "Azul"
->>>>>>> 5d703012d084cee80c62a3b839a086fdaa7adb95
     },
     {
       "id": 4,
       "nome": "Meia Cruzeiro",
-<<<<<<< HEAD
       "descricaoCurta": "Meia confortável com logo do clube",
       "descricaoCompleta": "Pack com 3 pares de meias confortáveis do Cruzeiro. Confeccionadas em algodão de qualidade com logo do clube bordado. Oferece suporte e conforto para o dia a dia.",
       "imagem": "img/meia-cruzeiro.png",
@@ -71,79 +43,43 @@
       "preco": 49.90,
       "tags": ["confortável", "pack 3 pares", "algodão"],
       "destaque": false
-=======
-      "descricao": "Meia confortável com logo do clube, pack com 3 pares",
-      "preco": 49.90,
-      "imagem": "meia-cruzeiro.png",
-      "categoria": "Meias",
-      "tamanhos": ["Único"],
-      "cor": "Azul e Branco"
->>>>>>> 5d703012d084cee80c62a3b839a086fdaa7adb95
     },
     {
       "id": 5,
       "nome": "Bandeira Cruzeiro",
-<<<<<<< HEAD
       "descricaoCurta": "Bandeira oficial 1.5m x 1m",
-      "descricaoCompleta": "Bandeira oficial do Cruzeiro de alta qualidade, medindo 1.5m x 1m, confeccionada em poliéster resistente. Perfeita para pendurar no estádio, na casa ou em qualquer lugar que celebre o time.",
+      "descricaoCompleta": "Bandeira oficial do Cruzeiro de alta qualidade, medindo 1.5m x 1m, confeccionada em poliéster resistente. Perfeita para pendurar no estádio, na casa ou em qualquer lugar que demonstre sua paixão pelo time.",
       "imagem": "img/bandeira.png",
       "categoria": "Bandeiras",
       "preco": 79.90,
       "tags": ["oficial", "1.5m x 1m", "poliéster"],
       "destaque": false
-=======
-      "descricao": "Bandeira oficial do Cruzeiro, 1.5m x 1m, poliéster",
-      "preco": 79.90,
-      "imagem": "bandeira.png",
-      "categoria": "Bandeiras",
-      "tamanhos": ["Única"],
-      "cor": "Azul, Branco e Dourado"
->>>>>>> 5d703012d084cee80c62a3b839a086fdaa7adb95
     },
     {
       "id": 6,
       "nome": "Boné Cruzeiro",
-<<<<<<< HEAD
       "descricaoCurta": "Boné ajustável com bordado frontal",
-      "descricaoCompleta": "Boné ajustável com bordado frontal da Máfia Azul. Estruturado e confortável, ideal para usar em dias de sol. Acompanha fecho de ajuste traseiro para se adequar a qualquer tamanho de cabeça.",
+      "descricaoCompleta": "Boné ajustável com bordado frontal da Máfia Azul. Estruturado e confortável, ideal para usar em dias de sol. Acompanha fecho de ajuste traseiro para se adequar a qualquer tamanho.",
       "imagem": "img/bone.png",
       "categoria": "Acessórios",
       "preco": 59.90,
       "tags": ["ajustável", "máfia azul", "bordado"],
       "destaque": false
-=======
-      "descricao": "Boné ajustável com bordado frontal da Máfia Azul",
-      "preco": 59.90,
-      "imagem": "bone.png",
-      "categoria": "Acessórios",
-      "tamanhos": ["Único"],
-      "cor": "Azul"
->>>>>>> 5d703012d084cee80c62a3b839a086fdaa7adb95
     },
     {
       "id": 7,
       "nome": "Moletom Cruzeiro",
-<<<<<<< HEAD
       "descricaoCurta": "Moletom premium com capuz",
-      "descricaoCompleta": "Moletom premium do Cruzeiro com capuz, ideal para dias frios. Confeccionado em material de alta qualidade e durabilidade. Possui bolsos frontais e ajuste de cordão no capuz para maior conforto.",
+      "descricaoCompleta": "Moletom premium do Cruzeiro com capuz, ideal para dias frios. Confeccionado em material de alta qualidade e durabilidade. Possui bolsos frontais e ajuste de cordão no capuz.",
       "imagem": "img/moletom.png",
       "categoria": "Moletom",
       "preco": 169.90,
       "tags": ["premium", "capuz", "dias frios"],
       "destaque": true
-=======
-      "descricao": "Moletom premium com capuz, ideal para dias frios",
-      "preco": 169.90,
-      "imagem": "moletom.png",
-      "categoria": "Moletom",
-      "tamanhos": ["P", "M", "G", "GG"],
-      "cor": "Azul Royal"
->>>>>>> 5d703012d084cee80c62a3b839a086fdaa7adb95
     },
     {
       "id": 8,
       "nome": "Caneca Cruzeiro",
-<<<<<<< HEAD
       "descricaoCurta": "Caneca de cerâmica 350ml",
       "descricaoCompleta": "Caneca de cerâmica com logo do Cruzeiro, capacidade de 350ml. Perfeita para beber seu café ou chá favorito enquanto torce para o time. Resistente e fácil de limpar.",
       "imagem": "img/caneca_1.png",
@@ -178,7 +114,7 @@
       "id": 11,
       "nome": "Mochila Cruzeiro",
       "descricaoCurta": "Mochila esportiva com compartimentos",
-      "descricaoCompleta": "Mochila esportiva do Cruzeiro com múltiplos compartimentos para organizar seus itens. Confeccionada em material resistente e durável. Ideal para ir à escola, trabalho ou praticar esportes.",
+      "descricaoCompleta": "Mochila esportiva do Cruzeiro com múltiplos compartimentos para organizar seus itens. Confeccionada em material resistente e durável. Ideal para ir à escola, trabalho ou eventos.",
       "imagem": "img/mochila.png",
       "categoria": "Acessórios",
       "preco": 139.90,
@@ -268,14 +204,6 @@
       "produtoId": 7,
       "notaMedia": 4.7,
       "totalAvaliacoes": 15
-=======
-      "descricao": "Caneca de cerâmica com logo do clube, 350ml",
-      "preco": 39.90,
-      "imagem": "caneca_1.png",
-      "categoria": "Utensílios",
-      "tamanhos": ["350ml"],
-      "cor": "Azul"
->>>>>>> 5d703012d084cee80c62a3b839a086fdaa7adb95
     }
   ]
 }
